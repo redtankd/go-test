@@ -6,12 +6,11 @@ go:
   - tip
 
 before_install:
-  - pwd
   - go get golang.org/x/tools/cmd/cover
   - go get github.com/mattn/goveralls
   - cd $GOPATH/src/github.com/mattn/goveralls 
   - git checkout multiple-packages
-  - cd $GOPATH/src/go-test
+  - cd $GOPATH/src/github.com/redtankd/go-test
 
 script:
   - $HOME/gopath/bin/goveralls -service=travis-ci
