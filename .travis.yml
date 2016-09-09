@@ -7,11 +7,8 @@ go:
 
 before_install:
   - go get golang.org/x/tools/cmd/cover
-  - go get -d github.com/mattn/goveralls
-  - cd $GOPATH/src/github.com/mattn/goveralls 
-  - git checkout multiple-packages
-  - go install
-  - cd $GOPATH/src/github.com/redtankd/go-test
+  - go get github.com/mattn/goveralls
 
 script:
-  - $HOME/gopath/bin/goveralls -service=travis-ci
+  # - $HOME/gopath/bin/goveralls -service=travis-ci
+  - ./test-cover.sh

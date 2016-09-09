@@ -6,9 +6,12 @@ import (
 )
 
 func TestAdd(t *testing.T) {
-    // t.Fail()
-    // t.Logf("%d", 3)
-	t.Skip()
+    if Add(5, 6) != 11 {
+        t.Fail()
+        t.Logf("%d + %d != %d", 5, 6, 11)    
+    }
+    
+    // t.Skip()
     
 }
 
