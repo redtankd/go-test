@@ -7,9 +7,10 @@ go:
 
 before_install:
   - go get golang.org/x/tools/cmd/cover
-  - go get github.com/mattn/goveralls
+  - go get -d github.com/mattn/goveralls
   - cd $GOPATH/src/github.com/mattn/goveralls 
   - git checkout multiple-packages
+  - go install
   - cd $GOPATH/src/github.com/redtankd/go-test
 
 script:
