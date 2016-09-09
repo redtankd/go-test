@@ -10,5 +10,6 @@ before_install:
   - go get github.com/mattn/goveralls
 
 script:
+  # goveralls don't support multiple package repository.
   # - $HOME/gopath/bin/goveralls -service=travis-ci
   - ./test-cover.sh
