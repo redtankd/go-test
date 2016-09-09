@@ -10,7 +10,7 @@ before_install:
   - go get github.com/mattn/goveralls
   - cd $GOPATH/src/github.com/mattn/goveralls 
   - git checkout multiple-packages
-  - cd $GOPATH
+  - cd $GOPATH/src/go-test
 
 script:
   - $HOME/gopath/bin/goveralls -service=travis-ci
