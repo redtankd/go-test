@@ -8,7 +8,9 @@ go:
 before_install:
   - go get golang.org/x/tools/cmd/cover
   - go get github.com/mattn/goveralls
-  - cd $HOME/gopath/src/github.com/mattn/goveralls && git checkout multiple-packages
+  - cd $GOPATH/src/github.com/mattn/goveralls 
+  - git checkout multiple-packages
+  - cd $GOPATH
 
 script:
   - $HOME/gopath/bin/goveralls -service=travis-ci
