@@ -11,17 +11,17 @@ do
 		then
     		if [ -f profile.cov ]
     		then
-        		cat profile.cov | grep -v "mode: set" >> acc.cov 
+        		cat profile.cov | grep -v "mode: set" | grep -v "mode: count" >> acc.cov 
     		fi
     	else
     		exit 1
     	fi	
     fi
 done
-if [ -n "$COVERALLS" ]
+if [ -n "$COVERALLS_TOKEN" ]
 then
 	goveralls -coverprofile=acc.cov -service=travis-ci
 fi	
 
-# rm -rf ./profile.cov
-# rm -rf ./acc.cov
+rm -rf ./profile.cov
+rm -rf ./acc.cov
