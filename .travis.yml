@@ -6,6 +6,7 @@ go:
   - tip
 
 before_install:
+  - pwd
   - go get golang.org/x/tools/cmd/cover
   - go get github.com/mattn/goveralls
   - cd $GOPATH/src/github.com/mattn/goveralls 
